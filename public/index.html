@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Timed Shapes, test</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <style>
+    #container {
+      padding: 50px;
+      background-color: #FFF;
+    }
+  </style>
+  </head>
+
+  <body>
+    <div id="container"></div>
+
+    <script type="text/babel">
+
+
+      var colors = ["#77b3d1", "#E94F37", "#1C89BF", "#A1D363", "#85FFC7", "#297373", "#FF8552",
+        "#A40E4C", "#85AFC0", "#296573", "#AA8552", "#CC0E4C", "#567187", "#c6c976", "#967c64",
+        "#e497ed", "#d24cff", "#e2ceb1", "#cc999e", "#97bf9a"];
+
+      var HeightWidth = [20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 140, 160]
+
+      var renderData = [];
+
+      for (var i = 0; i < colors.length; i++) {
+        renderData.push(<Circle key={i + colors[i]} bgColor={colors[i]} />);
+      }
+      ReactDOM.render(
+        <div>
+          {renderData}
+        </div>,
+        document.querySelector("#container")
+      );
+    </script>
+
+  </body>
+
+</html>
