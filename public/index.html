@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <title>Timed Shapes, test</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 
 <body>
@@ -33,14 +36,11 @@
 
       var HeightWidth = [20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 140, 160]
 
-      var renderData = [];
 
-      for (var i = 0; i < colors.length; i++) {
-        renderData.push(<Circle key={i + colors[i]} bgColor={colors[i]} />);
-      }
+
       ReactDOM.render(
         <div>
-          {renderData}
+          <Shapes />
         </div>,
         document.querySelector("#container")
       );
